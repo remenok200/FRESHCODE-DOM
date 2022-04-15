@@ -34,10 +34,11 @@ function createUserCardImageWrapper(userObj, fullName) {
       alt: fullName,
       'data-id': userObj.id,
     },
+    listeners: {
+      error: errorHandler,
+      load: loadHandler,
+    },
   });
-
-  userImgElem.addEventListener('error', errorHandler);
-  userImgElem.addEventListener('load', loadHandler);
 
   const initialsElem = createElement(
     'div',
