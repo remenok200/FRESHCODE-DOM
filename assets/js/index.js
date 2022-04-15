@@ -2,9 +2,18 @@
 
 const cardsContainer = document.getElementById('root');
 
-const cards = responseData.map((userDataObj) => generateUserCard(userDataObj));
+async function loadCards(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
 
-cardsContainer.append(...cards);
+    const cards = data.map((data) => generateUserCard(data));
+    cardsContainer.append(...cards);
+  } catch(e) {
+    console.log(e);
+  }
+}
+loadCards('./assets/js/data.json');
 
 function generateUserCard(userObj) {
   const fullName =
