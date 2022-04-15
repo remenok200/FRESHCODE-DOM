@@ -20,8 +20,6 @@ function generateUserCard(userObj) {
     `${userObj.firstName} ${userObj.lastName}`.trim() ||
     CARD_CONSTANTS.userName;
 
-  
-
   const imgWrapper = createUserCardImageWrapper(userObj, fullName);
 
   const cardName = createElement('h2', {classNames: ['cardName']}, fullName);
@@ -31,6 +29,8 @@ function generateUserCard(userObj) {
   const cardArticle = createElement('article', {classNames: ['cardContainer']}, imgWrapper, cardName, cardDescription);
 
   const card = createElement('li', {classNames: ['userCardWrapper']}, cardArticle);
+
+  createSocialMediaIcon(userObj, card);
 
   return card;
 }

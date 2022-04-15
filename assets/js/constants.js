@@ -8,9 +8,22 @@ const SUPPORTED_SOCIAL_NETWORKS = new Map([
   [
     "twitter.com",
     {
-      src: "https://w7.pngwing.com/pngs/872/50/png-transparent-computer-icons-social-media-logo-twitter-social-media-blue-logo-social-media-thumbnail.png",
+      src: "./assets/icons/twitter-icon.svg",
       alt: "twitter link for",
     },
   ],
-  ["www.facebook.com"],
+  [
+    "www.facebook.com",
+    {
+      src: "./assets/icons/facebook-icon.svg",
+      alt: "facebook link for",
+    },
+  ],
+  [
+    "www.instagram.com",
+    {
+      src: "./assets/icons/instagram-icon.svg",
+      alt: "instagram link for",
+    },
+  ],
 ]);
