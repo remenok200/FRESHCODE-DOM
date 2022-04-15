@@ -11,26 +11,18 @@ function generateUserCard(userObj) {
     `${userObj.firstName} ${userObj.lastName}`.trim() ||
     CARD_CONSTANTS.userName;
 
-  const card = document.createElement('li');
-  card.classList.add('userCardWrapper');
-
-  const cardArticle = document.createElement('article');
-  cardArticle.classList.add('cardContainer');
+  
 
   const imgWrapper = createUserCardImageWrapper(userObj, fullName);
 
-  const cardName = document.createElement('h2');
-  cardName.classList.add('cardName');
-  cardName.textContent = fullName;
+  const cardName = createElement('h2', {classNames: ['cardName']}, fullName);
 
-  const cardDescription = document.createElement('p');
-  cardDescription.classList.add('cardDescription');
-  cardDescription.textContent =
-    userObj.description || CARD_CONSTANTS.cardDescription;
+  const cardDescription = createElement('p', {classNames: ['cardDescription']}, userObj.description || CARD_CONSTANTS.cardDescription);
+  
+  const cardArticle = createElement('article', {classNames: ['cardContainer']}, imgWrapper, cardName, cardDescription);
 
-  cardArticle.append(imgWrapper, cardName, cardDescription);
+  const card = createElement('li', {classNames: ['userCardWrapper']}, cardArticle);
 
-  card.append(cardArticle);
   return card;
 }
 
