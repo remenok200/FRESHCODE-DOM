@@ -1,6 +1,6 @@
 'use strict';
 
-const cardsContainer = document.getElementById('root');
+const cardsContainer = document.querySelector('#root');
 
 async function loadCards(url) {
   try {
@@ -10,7 +10,7 @@ async function loadCards(url) {
     const cards = data.map((data) => generateUserCard(data));
     cardsContainer.append(...cards);
   } catch(e) {
-    console.log(e);
+    throw new Error(e);
   }
 }
 loadCards('./assets/js/data.json');

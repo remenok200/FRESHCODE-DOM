@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  background-color: black;
 }
 
 .container {
@@ -14,9 +15,10 @@
 }
 
 .userCardWrapper {
-  border: 1px solid black;
+  border: 6px solid #AC3247;
   border-radius: 20px;
   margin: 2rem 1rem;
+  background-color: yellow;
 }
 
 .cardContainer {
@@ -33,7 +35,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  border: 6px solid orange;
+  border: 6px solid #AC3247;
   overflow: hidden;
 }
 
@@ -69,4 +71,15 @@
 
 .cardDescription {
   font-style: italic;
+}
+
+.main-header {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  border: 7px solid #AC3247;
+  border-radius: 20px;
+  background-color: yellow;
 }
