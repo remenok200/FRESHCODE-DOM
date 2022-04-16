@@ -30,7 +30,7 @@ function generateUserCard(userObj) {
 
   const card = createElement('li', {classNames: ['userCardWrapper']}, cardArticle);
 
-  createSocialMediaIcon(userObj, card);
+  createSocialMediaIcons(userObj, card);
 
   return card;
 }

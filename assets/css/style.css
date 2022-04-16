@@ -87,9 +87,11 @@
 .socialMediaIcon {
   height: 40px;
   width: 40px;
-  padding-bottom: 20px;
+  padding-right: 20px;
 }
 
-.socialMediaIconWrapper {
-  padding-left: 55px;
-} 
+.socialNetworksCards {
+  display: flex;
+  justify-content:center;
+  padding-bottom: 20px;
+}

@@ -1,4 +1,8 @@
-function createSocialMediaIcon(user, elem) {
+function createSocialMediaIcons(user, elem) {
+  const socialNetworksCards = createElement("div", {
+    classNames: ["socialNetworksCards"],
+  });
+
   const currentUser = [];
   currentUser.push(user.contacts);
 
@@ -20,7 +24,9 @@ function createSocialMediaIcon(user, elem) {
         },
         currentSocialNetworkIcon
       );
-      elem.append(currentSocialNetwork);
+      socialNetworksCards.append(currentSocialNetwork);
     }
   }
+
+  elem.append(socialNetworksCards);
 }
